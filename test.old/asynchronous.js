@@ -1,0 +1,37 @@
+function User (name) {
+    this.name = name;
+    this.color = "red";
+}
+
+User.prototype.save = function(callback) {
+	console.log('Whats up ? ');
+	var data = 'hello';
+	callback(data);
+
+};
+
+describe('User', function() {
+
+	beforeEach(function() {
+		console.log('before every test in every file');
+	    });
+
+	describe('#save()', function() {
+		it('should save without error', function(done) {
+			var user = new User('Luna');
+			user.save(function(data, err) {
+
+				if (err) {
+				      console.log('something to log '+  err);
+				    }
+
+				if (data) {
+				    console.log('My data : ' + data);
+				}
+				done();
+			    });
+		    });
+	    });
+
+
+    });

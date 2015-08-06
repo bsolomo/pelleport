@@ -1,0 +1,10 @@
+var expect = require('expect');
+
+describe('Type', function() {
+
+	var foo = 'hello';
+
+	it('should pass', function() {
+		expect(foo).to.not.equal('bar');
+	    });
+    });

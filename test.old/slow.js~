@@ -1,0 +1,7 @@
+describe('something slow', function() {
+	this.timeout(500);
+
+	it('should take long enough for me to go make a sandwich', function() {
+		setTimeout(done, 600);
+	    });
+    });
